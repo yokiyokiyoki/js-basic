@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import Home from "@/pages";
+import ArrayModule from "@/pages/array";
+import ObjectModule from "@/pages/object";
 
 Vue.use(Router);
 
@@ -10,7 +12,19 @@ export default new Router({
     {
       path: "/",
       name: "Home",
-      component: Home
+      component: Home,
+      children: [
+        {
+          path: "array",
+          name: "Array",
+          component: ArrayModule
+        },
+        {
+          path: "object",
+          name: "Object",
+          component: ObjectModule
+        }
+      ]
     }
   ]
 });
