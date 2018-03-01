@@ -8,6 +8,9 @@
             <el-menu-item index="intro">
                 <span slot="title">简介</span>
             </el-menu-item>
+            <el-menu-item index="operate">
+                <span slot="title">基本操作</span>
+            </el-menu-item>
             </el-menu>
         </el-aside>
         <el-main>
@@ -17,6 +20,7 @@
 </template>
 <script>
 const intro = () => import("./components/intro");
+const operate = () => import("./components/operate");
 export default {
   data() {
     return {
@@ -25,10 +29,14 @@ export default {
     };
   },
   methods: {
-    handleSelect(key, keyPath) {}
+    handleSelect(key, keyPath) {
+      this.active = key;
+      this.componentId = key;
+    }
   },
   components: {
-    intro
+    intro,
+    operate
   }
 };
 </script>
