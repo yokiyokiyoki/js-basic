@@ -11,6 +11,9 @@
             <el-menu-item index="operate">
                 <span slot="title">基本操作</span>
             </el-menu-item>
+            <el-menu-item index="arrayMethod">
+                <span slot="title">数组方法</span>
+            </el-menu-item>
             </el-menu>
         </el-aside>
         <el-main>
@@ -21,6 +24,7 @@
 <script>
 const intro = () => import("./components/intro");
 const operate = () => import("./components/operate");
+const arrayMethod = () => import("./components/arrayMethod");
 export default {
   data() {
     return {
@@ -36,7 +40,8 @@ export default {
   },
   components: {
     intro,
-    operate
+    operate,
+    arrayMethod
   }
 };
 </script>
