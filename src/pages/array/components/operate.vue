@@ -16,7 +16,20 @@
             <div class="title">arr=Array.of(7),创建一个[7]</div>
             <div class="title">arr=Array.of(1,2,3),创建一个[1,2,3]</div>
         </div>   
-    </el-card> 
+      </el-card>
+      <el-card class="box-card">
+        <div slot='header'>
+            <div class="title">
+                - 检测是不是数组
+            </div>
+        </div>
+        <div class="item">
+            <div class="title">- arr instanceof Array</div>
+            <div class="title">- Object.prototype.toString.call(arr)=='[object Array]'</div>
+            <div class="title">- 推荐：Array.isArray(arr)</div>
+            <div class="title">- arr.constructor==Array</div>
+        </div>   
+      </el-card> 
   </div>
 </template>
 <script>
