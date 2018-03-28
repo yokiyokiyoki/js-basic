@@ -18,7 +18,11 @@
         </div>
         <div class="item">
             <div class="title">- arrayLike是想要转换成真实数组的类数组对象或者可遍历对象</div>
-            <div class="title"></div>
+            <div class="title">- 所谓类数组对象，本质特征只有一点，即有length属性的对象</div>
+            <div class="title">- 实际应用中，常见的类数组对象是dom操作的NodeList集合，以及函数内部的arguments对象</div>
+            <div class="title">- mapfn是对arrayLike的每个元素调用的映射函数</div>
+            <div class="title">- newArray1=Array.from(document.querySelectorAll('*'))</div>
+            <div class="title">- newArray2 = Array.from(arrayLike, (v) => v+'1')</div>
         </div>   
     </el-card> 
   </div>
