@@ -14,6 +14,9 @@
             <el-menu-item index="arrayMethod">
                 <span slot="title">数组方法</span>
             </el-menu-item>
+            <el-menu-item index="instanceMethod">
+                <span slot="title">数组实例方法</span>
+            </el-menu-item>
             </el-menu>
         </el-aside>
         <el-main>
@@ -25,6 +28,7 @@
 const intro = () => import("./components/intro");
 const operate = () => import("./components/operate");
 const arrayMethod = () => import("./components/arrayMethod");
+const instanceMethod = () => import("./components/instanceMethod");
 export default {
   data() {
     return {
@@ -41,7 +45,8 @@ export default {
   components: {
     intro,
     operate,
-    arrayMethod
+    arrayMethod,
+    instanceMethod
   }
 };
 </script>
