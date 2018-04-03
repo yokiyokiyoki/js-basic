@@ -76,7 +76,13 @@
                 </div>
             </div>
              <div class="item">
-                 
+                 <div class="title">- arr.every如果对每一项都返回true，则返回true</div>
+                 <div class="title">- arr.some如果任意项返回true，则返回true</div>
+                 <div class="title">- arr.filter返回符合条件的数组</div>
+                 <div class="title">- arr.forEach给每个项进行迭代</div>
+                 <div class="title">- arr.map返回每次函数调用后的新数组</div>
+                 <div class="title">- arr.find找到第一个返回值为true的item，如果没有符合的，返回undefined</div>
+                 <div class="title">- arr.findIndex找到索引</div>
             </div>  
         </el-card>
     </div>   
