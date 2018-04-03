@@ -17,6 +17,9 @@
             <el-menu-item index="instanceMethod">
                 <span slot="title">数组实例方法</span>
             </el-menu-item>
+            <el-menu-item index="merge">
+                <span slot="title">常见问题：数组合并</span>
+            </el-menu-item>
             </el-menu>
         </el-aside>
         <el-main>
@@ -29,6 +32,7 @@ const intro = () => import("./components/intro");
 const operate = () => import("./components/operate");
 const arrayMethod = () => import("./components/arrayMethod");
 const instanceMethod = () => import("./components/instanceMethod");
+const merge = () => import("./components/merge");
 export default {
   data() {
     return {
@@ -46,7 +50,8 @@ export default {
     intro,
     operate,
     arrayMethod,
-    instanceMethod
+    instanceMethod,
+    merge
   }
 };
 </script>
