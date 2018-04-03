@@ -85,6 +85,17 @@
                  <div class="title">- arr.findIndex找到索引</div>
             </div>  
         </el-card>
+        <el-card class="box-card">
+            <div slot='header'>
+                <div class="title">
+                    - 归并方法
+                </div>
+            </div>
+             <div class="item">
+                 <div class="title">- arr.reduce从左到右迭代数组所有的项，然后返回一个最终值</div>
+                 <div class="title">- arr.reduceRight</div>
+            </div>  
+        </el-card>
     </div>   
 </template>
 <script>
