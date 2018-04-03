@@ -20,6 +20,9 @@
             <el-menu-item index="merge">
                 <span slot="title">常见问题：数组合并</span>
             </el-menu-item>
+            <el-menu-item index="repeat">
+                <span slot="title">常见问题：数组去重</span>
+            </el-menu-item>
             </el-menu>
         </el-aside>
         <el-main>
@@ -33,6 +36,7 @@ const operate = () => import("./components/operate");
 const arrayMethod = () => import("./components/arrayMethod");
 const instanceMethod = () => import("./components/instanceMethod");
 const merge = () => import("./components/merge");
+const repeat = () => import("./components/repeat");
 export default {
   data() {
     return {
@@ -51,7 +55,8 @@ export default {
     operate,
     arrayMethod,
     instanceMethod,
-    merge
+    merge,
+    repeat
   }
 };
 </script>
