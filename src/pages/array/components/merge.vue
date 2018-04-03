@@ -20,7 +20,24 @@
             </div>
              <div class="item">
                  <div class="title">- 使用push和递归</div>
-                 <div class="title">- function flatten(arr,result){ if(!result){result=[]}}</div>
+                 <div class="title">- 
+                     <pre>    
+                        function flatten(arr,result){ 
+                            if(!result){
+                                result=[]
+                            }
+                            for(var i=0;i小于arr.length;i++){
+                                if(arr[i].constructor==Array){
+                                    flatten(arr[i],r)
+                                }else{
+                                    result.push(arr[i])
+                                }
+                            }
+                            return result
+                        }
+                     </pre> 
+                </div>
+                <div class="title">flatten(arr1)</div>
             </div>  
         </el-card>
   </div>
