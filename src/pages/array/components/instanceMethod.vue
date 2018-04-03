@@ -69,6 +69,16 @@
                  <div class="title">- arr.includes(ele,fromIndex):现在一般使用这个，用来判断当前数组是否包含ele</div>
             </div>  
         </el-card>
+        <el-card class="box-card">
+            <div slot='header'>
+                <div class="title">
+                    - 迭代方法
+                </div>
+            </div>
+             <div class="item">
+                 
+            </div>  
+        </el-card>
     </div>   
 </template>
 <script>
