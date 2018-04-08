@@ -28,7 +28,7 @@
                             }
                             for(var i=0;i小于arr.length;i++){
                                 if(arr[i].constructor==Array){
-                                    flatten(arr[i],r)
+                                    flatten(arr[i],result)
                                 }else{
                                     result.push(arr[i])
                                 }
@@ -43,5 +43,38 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  mounted() {
+    let arr = flatten1([
+      [1, 2],
+      [3, 4, 5],
+      [6, 7, 8, 9],
+      [11, 12, [12, 13, [14]]],
+      10,
+      11
+    ]);
+    console.log(arr);
+  }
+};
+//这个是两个数组arr1，arr2合成一个，使用reduce，一般是arr1.concat(arr2)
+function flatten(arr1, arr2) {
+  return arr2.reduce((prev, curr) => {
+    prev.push(curr);
+    return prev;
+  }, arr1);
+}
+function flatten1(arr, result) {
+  if (!result) {
+    result = [];
+  }
+  //   遍历每一个，如果是数组，则递归，如果不是数组，则放入result
+  arr.forEach(item => {
+    if (item.constructor == Array) {
+      flatten1(item, result);
+    } else {
+      result.push(item);
+    }
+  });
+  return result;
+}
 </script>
