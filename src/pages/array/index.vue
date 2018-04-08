@@ -23,6 +23,9 @@
             <el-menu-item index="repeat">
                 <span slot="title">常见问题：数组去重</span>
             </el-menu-item>
+            <el-menu-item index="repeat">
+                <span slot="title">常见问题：数组随机排序</span>
+            </el-menu-item>
             </el-menu>
         </el-aside>
         <el-main>
@@ -37,6 +40,7 @@ const arrayMethod = () => import("./components/arrayMethod");
 const instanceMethod = () => import("./components/instanceMethod");
 const merge = () => import("./components/merge");
 const repeat = () => import("./components/repeat");
+const randomSort = () => import("./components/randomSort");
 export default {
   data() {
     return {
@@ -56,7 +60,8 @@ export default {
     arrayMethod,
     instanceMethod,
     merge,
-    repeat
+    repeat,
+    randomSort
   }
 };
 </script>
