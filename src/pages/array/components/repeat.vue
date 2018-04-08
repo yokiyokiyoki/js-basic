@@ -16,6 +16,13 @@
             <div class="title">- 使用includes和原数组循环</div>
             <div class="title">- 如果没有包含在结果数组里面的，则添加到结果数组里面去</div>
         </div>  
+        <div class="item">
+            <div class="title">- 使用new Set(arr)</div>
+            <div class="title"> return [...new]</div>
+        </div>
+        <div class="item">
+            <div class="title">- 使用Map数据结构</div>
+        </div>
     </el-card>
   </div>
 </template>
@@ -24,6 +31,7 @@ export default {
   mounted() {
     console.log(unique([1, 2, 3, 4, 3, 2, "a", "b", "a"]));
     console.log(unique1([1, 2, 3, 4, 3, 2, "a", "b", "a"]));
+    console.log(unique2([1, 2, 3, 4, 3, 2, "a", "b", "a"]));
   }
 };
 // 双重循环去重
@@ -51,6 +59,10 @@ function unique1(arr) {
     }
   });
   return res;
+}
+function unique2(arr) {
+  let seen = new Map();
+  return arr.filter(v => !seen.has(v) && seen.set(v, 1));
 }
 </script>
 
