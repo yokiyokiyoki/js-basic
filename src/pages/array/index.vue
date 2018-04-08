@@ -23,7 +23,7 @@
             <el-menu-item index="repeat">
                 <span slot="title">常见问题：数组去重</span>
             </el-menu-item>
-            <el-menu-item index="repeat">
+            <el-menu-item index="randomSort">
                 <span slot="title">常见问题：数组随机排序</span>
             </el-menu-item>
             </el-menu>

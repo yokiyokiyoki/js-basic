@@ -12,14 +12,18 @@
             <div class="title">- 边界条件是数组只剩下一个元素</div>
         </div> 
         <div class="item">
-            <div class="title"></div>
+            <div class="title">- 随机交换数组内的元素，来自underscore.js</div>
+            <div class="title">- 遍历数组，每次从i位置后元素随机挑一个放到i位置，然后将原来的i位置放到被挑元素位置</div>
         </div>
     </el-card>
   </div>
 </template>
 <script>
 export default {
-  mounted() {}
+  mounted() {
+    console.log(randomSort([1, 2, 3, 4, 5]));
+    console.log(randomSort1([1, 2, 3, 4, 5]));
+  }
 };
 //递归
 function randomSort(arr, newArr = []) {
@@ -31,5 +35,17 @@ function randomSort(arr, newArr = []) {
   newArr.push(arr[randomIndex]);
   arr.splice(randomIndex, 1);
   return randomSort(arr, newArr);
+}
+//随机交换
+function randomSort1(arr) {
+  let len = arr.length;
+  let temp, randomIndex;
+  for (let i = 0; i < len; i++) {
+    randomIndex = i + Math.floor(Math.random() * (len - i));
+    temp = arr[i];
+    arr[i] = arr[randomIndex];
+    arr[randomIndex] = temp;
+  }
+  return arr;
 }
 </script>
