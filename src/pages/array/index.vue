@@ -26,6 +26,9 @@
             <el-menu-item index="randomSort">
                 <span slot="title">常见问题：数组随机排序</span>
             </el-menu-item>
+            <el-menu-item index="max">
+                <span slot="title">常见问题：数组取最大值</span>
+            </el-menu-item>
             </el-menu>
         </el-aside>
         <el-main>
@@ -41,6 +44,7 @@ const instanceMethod = () => import("./components/instanceMethod");
 const merge = () => import("./components/merge");
 const repeat = () => import("./components/repeat");
 const randomSort = () => import("./components/randomSort");
+const max = () => import("./components/max");
 export default {
   data() {
     return {
@@ -61,7 +65,8 @@ export default {
     instanceMethod,
     merge,
     repeat,
-    randomSort
+    randomSort,
+    max
   }
 };
 </script>
