@@ -18,7 +18,7 @@
         </div>  
         <div class="item">
             <div class="title">- 使用new Set(arr)</div>
-            <div class="title"> return [...new]</div>
+            <div class="title">- return [...new]</div>
         </div>
         <div class="item">
             <div class="title">- 使用Map数据结构</div>
@@ -65,4 +65,5 @@ function unique2(arr) {
   return arr.filter(v => !seen.has(v) && seen.set(v, 1));
 }
 </script>
+
 
