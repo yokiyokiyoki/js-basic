@@ -94,10 +94,25 @@
              <div class="item">
                  <div class="title">- arr.reduce从左到右迭代数组所有的项，然后返回一个最终值</div>
                  <div class="title">- arr.reduceRight</div>
+                 <div class="title">- reduce在函数式编程里很重要，通常用于将数组所有成员“累积”一个值</div>
+                 <div class="title">- arr.reduce(fn,initData)有两个参数，第一个是fn(a,b)，a是累计变量，b是当前数组成员，每次执行b会累计到a，最后输出a。</div>
+                 <div class="title">- 累计变量必须有一个初始值，initData就是初始值，如果没有，默认就是数组的第一个成员</div>
             </div>  
         </el-card>
     </div>   
 </template>
 <script>
-export default {};
+export default {
+  mounted() {
+    this.showReduce();
+  },
+  methods: {
+    showReduce() {
+      //reduce
+      let arr = [1, 2, 3, 4];
+      let sum = (a, b) => a + b;
+      console.log(arr.reduce(sum, 0));
+    }
+  }
+};
 </script>
