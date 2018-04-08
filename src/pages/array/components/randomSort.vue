@@ -7,11 +7,29 @@
             </div>
         </div>
         <div class="item">
-            <div class="title">- 双重循环去重的主要思路</div>
-            <div class="title">- 构建一个空数组来存放去重后的数组</div>
-            <div class="title">- 对原数组做循环遍历，每次从数组中取出一个元素与结果数组比较,使用一个flag比较</div>
-            <div class="title">- 如果原数组取出来的元素在结果数组中存在,则flag为true，循环完了，再根据flag是不是false来放入结果数组</div>
+            <div class="title">- 递归的思路</div>
+            <div class="title">- 不断从原数组中随机取出一个元素放进新数组，同时删除这个值，递归重复到全部取出</div>
+            <div class="title">- 边界条件是数组只剩下一个元素</div>
         </div> 
+        <div class="item">
+            <div class="title"></div>
+        </div>
     </el-card>
   </div>
 </template>
+<script>
+export default {
+  mounted() {}
+};
+//递归
+function randomSort(arr, newArr = []) {
+  if (arr.length == 1) {
+    newArr.push(arr[0]);
+    return newArr; //递归退出
+  }
+  let randomIndex = Math.ceil(Math.random() * arr.length) - 1;
+  newArr.push(arr[randomIndex]);
+  arr.splice(randomIndex, 1);
+  return randomSort(arr, newArr);
+}
+</script>
