@@ -24,10 +24,11 @@ export default new Router({
           path: "object",
           name: "Object",
           component: ObjectModule
-        },{
-          path:'async',
-          name:'Async',
-          component:AsyncModule
+        },
+        {
+          path: "async",
+          name: "Async",
+          component: AsyncModule
         }
       ]
     }
