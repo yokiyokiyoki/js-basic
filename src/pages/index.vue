@@ -25,7 +25,8 @@ export default {
           name: "数组",
           path: "array"
         },
-        { name: "对象", path: "object" }
+        { name: "对象", path: "object" },
+        { name: "异步", path: "async" }
       ]
     };
   },
